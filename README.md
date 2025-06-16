@@ -1,6 +1,7 @@
 - 👋 Hi, I’m @CraqZy
 - 👀 I’m interested in mostly Java and lua 
-- 🌱 I’m currently learning Java
+- 🌱 I’m currently learning Java and python
+- 🧑🏼‍💼 i’m currently working at Ddx software solutions
 - 📫 How to reach me https://prf.lol/craqZy
 <!---
 CraqZy/CraqZy is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.

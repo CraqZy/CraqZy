@@ -1,0 +1,62 @@
+def get_number (prompt):
+    while True:
+        try:
+            number = float(input(prompt))
+            print("you entered:", number)
+            return number
+        except ValueError:
+            print("invalid Input. Please try again.")
+
+def sum(number1, number2):
+    return number1 + number2
+
+def diff(number1, number2):
+    return number1 - number2
+
+def prod(number1:float, number2:float)->float:
+    return number1 * number2
+
+def quot(number1:float, number2:float)->any:
+    '''
+    this makes calculating Devision possible.
+    '''
+    return number1 / number2 if  number2 != 0 else "that doesnt work: Devision by zero"
+
+def power(number1, number2):
+    return number1 ** number2
+
+operations = {
+        "+": (sum),
+        "-": (diff),
+        "*": (prod),
+        "/": (quot),
+        "^": (power)
+}
+
+def get_operation():
+    valid_operations = list(operations.keys())
+    while True:
+        operation = input(f"what do you want to calculate ({valid_operations}):")
+        if operation in valid_operations:
+            print(f"You chose: {operation}")
+            return operation
+        else:
+            print(f"Invalid operation. Please enter one of the valid operations ({valid_operations})")
+
+def run_calculator():
+    while True:
+        number1 = get_number("please enter the first number: ")
+        number2 = get_number("please enter another number: ")
+        operation = get_operation()
+        result = 0
+        if operation in operations:
+            result = operations[operation](number1, number2)
+            if result is not None:
+                print (f"Result: {result}")
+
+        answer = input("Do you want to calculate more? (yes/no): ").strip().lower()
+        if answer == "no":
+            break
+
+run_calculator()
+    
